@@ -1,0 +1,55 @@
+# Local Python environments and interpreter artifacts
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and tooling caches
+**/test/
+**/tests/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+htmlcov/
+.cache/
+**/cache/
+
+# Project data, generated outputs, and training artifacts
+/dataset/
+/processed_plates/
+/runs/
+/outputs/
+/output/
+
+# Model checkpoints and exported model binaries
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+
+# Documents and presentations
+*.[pP][dD][fF]
+*.[pP][pP][tT]
+*.[pP][pP][tT][xX]
+*.[pP][pT][mM]
+*.[pP][pP][sS]
+*.[pP][pP][sS][xX]
+
+# Common local media and debug outputs
+debug_*
+*.mp4
+*.avi
+*.mov
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

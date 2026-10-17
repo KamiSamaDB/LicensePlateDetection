@@ -1,0 +1,24 @@
+Algorithm:
+
+1. Get the input video
+2. Pass each frame through YOLO model to detect license plates
+3. If a license plate is detected, apply optimization techniques on the cropped image before passing to OCR
+	3a. Angle Correction
+	3b. Motion blur reduction (unsharp masking)
+	3c. Upscaling
+	3d. Convert to grayscale and enhance
+	3e. Contrast Boosting
+	3f. Light Sharpening
+	3g. Adaptive Denoising
+	3h. Convert to BGR (for easy OCR) and add padding
+4. Get the output from the OCR
+5. Validate the output using pre defined rules
+	5a. Length of plate must be 10 characters
+	5b. First 2 characters must represent the state code, therefore must be from a list of valid codes
+	5c. Last 4 characters must be numbers
+	5d. 5th characters is always a number
+	5e. 6th character is most likely a number
+6. If the output is valid, add it to a list corresponding to the co-ordinates of the detected plate in the image
+7. Account for the plate moving through the video when checking again for the reading.
+8. The most confident reading out of the list for that plate is displayed as output.
+9. Repeat the steps until end of video is reached
